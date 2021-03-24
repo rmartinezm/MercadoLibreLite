@@ -45,6 +45,8 @@ dependencies {
     implementation AndroidX.constraintLayout
     /* DESIGN */
     implementation Material.material
+    /* DI */
+    implementation Koin.androidViewModel
     /* MODULE */
     implementation project(path: Core.clean)
     /* TESTING */
