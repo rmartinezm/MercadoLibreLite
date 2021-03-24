@@ -1,2 +1,6 @@
-include ':app'
+/* PROJECT */
 rootProject.name = "Mercado Libre Lite"
+include ':app'
+
+/* CORE */
+include ':core:clean'
