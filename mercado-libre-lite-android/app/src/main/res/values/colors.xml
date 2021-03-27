@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#2B317E</color>
     <color name="colorAccent">#FFF158</color>
     <color name="colorAccentDark">#FFE600</color>
+
+    <!-- WIDGET -->
+    <!-- WIDGET: TEXT INPUT LAYOUT -->
+    <color name="til_error_color">#FC5457</color>
+
 </resources>

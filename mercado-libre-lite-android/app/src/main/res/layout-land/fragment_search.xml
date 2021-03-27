@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.search.SearchFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="cs.roberto.mercadolibrelite.presentation.search.SearchViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/lateral_margin">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/search_logo_width_at_landscape"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_mercado_libre_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_search_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_search_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/search_screen_search_input_hint"
+                    android:inputType="textCapSentences"
+                    android:text="@={ viewModel.searchInputLiveData }" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mb_search_action"
+                android:layout_width="@dimen/material_button_width"
+                android:layout_height="wrap_content"
+                android:text="@string/search_screen_search_action"
+                android:layout_marginTop="@dimen/vertical_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

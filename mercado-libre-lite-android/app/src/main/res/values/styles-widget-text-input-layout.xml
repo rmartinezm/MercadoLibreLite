@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.MercadoLibreLite.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textAppearance">@style/TextAppearance.MercadoLibreLite.TextInputLayout</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="hintTextColor">@android:color/darker_gray</item>
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="errorTextColor">@color/til_error_color</item>
+        <item name="boxStrokeErrorColor">@color/til_error_color</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MercadoLibreLite.TextInputLayout</item>
+    </style>
+
+    <style name="TextAppearance.MercadoLibreLite.TextInputLayout" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/caption_font_size</item>
+        <item name="android:fontWeight" tools:targetApi="o">400</item>
+    </style>
+
+    <style name="ThemeOverlay.MercadoLibreLite.TextInputLayout" parent="ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="editTextStyle">@style/Theme.MercadoLibreLite.TextInputEditText</item>
+    </style>
+
+</resources>
