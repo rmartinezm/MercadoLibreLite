@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.splash.SplashFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/splash_landscape_horizontal_margin"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_mercado_libre_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/harabara_mais"
+            android:text="@string/app_name_extension"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/lateral_margin"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_title_size" />
+
+    </FrameLayout>
+
+</layout>
