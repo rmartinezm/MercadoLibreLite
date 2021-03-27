@@ -9,6 +9,10 @@ android {
     defaultConfig {
         applicationId "cs.roberto.mercadolibrelite"
     }
+
+    buildFeatures {
+        dataBinding true
+    }
     
 }
 
@@ -19,6 +23,8 @@ dependencies {
     implementation AndroidX.constraintLayout
     /* DESIGN */
     implementation Material.material
+    /* NAVIGATION COMPONENT */
+    implementation AndroidXNavigation.fragmentKtx
     /* MODULE */
     implementation project(path: Core.clean)
     implementation project(path: SharedPool.httpClient)
