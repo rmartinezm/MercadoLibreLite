@@ -1,0 +1,21 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+
+    defaultConfig {
+        buildConfigField "String", ConfigField.API_BASE_URL, ConfigField.apiBaseValue
+    }
+
+}
+
+dependencies {
+    implementation Retrofit.loggingInterceptor
+    implementation Moshi.converter
+}
+
+apply from: "$rootDir/base-build.gradle"
+apply from: "$rootDir/shared-pool/data-source-remote-build.gradle"

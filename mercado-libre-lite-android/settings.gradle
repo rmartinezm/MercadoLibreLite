@@ -4,3 +4,6 @@ include ':app'
 
 /* CORE */
 include ':core:clean'
+
+/* SHARED POOL */
+include ':shared-pool:httpclient'

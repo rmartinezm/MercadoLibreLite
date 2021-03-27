@@ -1,0 +1,6 @@
+
+dependencies {
+    implementation Retrofit.retrofit
+    implementation Moshi.kotlin
+    kapt Moshi.codegen
+}
