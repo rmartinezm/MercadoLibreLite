@@ -1,4 +1,12 @@
 <resources>
+
+    <!-- APPLICATION -->
     <string name="app_name">Mercado Libre Lite</string>
     <string name="app_name_extension">lite</string>
+
+    <!-- SEARCH SCREEN -->
+    <string name="search_screen_search_input_hint">Search for products, brands and more…</string>
+    <string name="search_screen_search_action">Search</string>
+    <string name="search_screen_search_input_failure_query_cant_be_blank">Required search value</string>
+
 </resources>

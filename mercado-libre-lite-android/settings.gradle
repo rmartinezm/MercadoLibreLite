@@ -3,6 +3,7 @@ rootProject.name = "Mercado Libre Lite"
 include ':app'
 
 /* CORE */
+include ':core:stringktx'
 include ':core:clean'
 
 /* SHARED POOL */

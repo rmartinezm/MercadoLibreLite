@@ -1,3 +1,4 @@
 dependencies {
+    implementation project(path: Core.stringKtx)
     implementation project(path: Core.clean)
 }
