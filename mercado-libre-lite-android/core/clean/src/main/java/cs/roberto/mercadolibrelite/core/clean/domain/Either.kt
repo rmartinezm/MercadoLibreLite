@@ -94,6 +94,16 @@ suspend fun <L, R> Either<L, R>.onLeft(fn: suspend (L) -> Unit) : Either<L, R> =
     }.let { this }
 
 /**
+ * Executes the received as param function if the Either value is Left to transforms the failure
+ * value to an Either value. If current Either is Right, returns the current Either value.
+ */
+suspend fun <L, R> Either<L, R>.manageLeftToEither(fn: suspend (L) -> Either<L, R>) : Either<L, R> =
+    when (this){
+        is Either.Left -> fn(left)
+        is Either.Right -> this
+    }
+
+/**
  * Executes the received as param function if the Either value is Right. Do nothing in other case.
  * Returns the current Either value after these.
  */

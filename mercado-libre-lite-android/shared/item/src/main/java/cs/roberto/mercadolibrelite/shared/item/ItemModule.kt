@@ -2,14 +2,16 @@ package cs.roberto.mercadolibrelite.shared.item
 
 import cs.roberto.mercadolibrelite.shared.item.data.ItemDataSource
 import cs.roberto.mercadolibrelite.shared.item.data.ItemRepositoryImpl
-import cs.roberto.mercadolibrelite.shared.item.data.data_source.dummy.ItemDataSourceDummy
 import cs.roberto.mercadolibrelite.shared.item.data.data_source.remote.ItemApiService
 import cs.roberto.mercadolibrelite.shared.item.data.data_source.remote.ItemDataSourceRemote
 import cs.roberto.mercadolibrelite.shared.item.domain.ItemRepository
+import cs.roberto.mercadolibrelite.shared.item.domain.use_case.get_item_description.GetItemDescriptionUseCase
+import cs.roberto.mercadolibrelite.shared.item.domain.use_case.get_items_details.GetItemDetailsUseCase
 import cs.roberto.mercadolibrelite.shared.item.domain.use_case.get_items_references.GetItemsReferencesUseCase
+import cs.roberto.mercadolibrelite.shared.item.presentation.get_item_details.GetItemDetails
+import cs.roberto.mercadolibrelite.shared.item.presentation.get_item_details.GetItemDetailsImpl
 import cs.roberto.mercadolibrelite.shared.item.presentation.get_items_references.GetItemsReferences
 import cs.roberto.mercadolibrelite.shared.item.presentation.get_items_references.GetItemsReferencesImpl
-import cs.roberto.mercadolibrelite.shared_pool.httpclient.retrofit.RetrofitBuilder
 import org.koin.core.module.Module
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -23,11 +25,27 @@ val itemModule: Module = module {
             getItemsReferencesUseCase = get(),
         )
     }
+    single<GetItemDetails> {
+        GetItemDetailsImpl(
+            getItemDetailsUseCase = get(),
+        )
+    }
 
     /** USE CASES **/
     factory {
         GetItemsReferencesUseCase(
             itemRepository = get(),
+        )
+    }
+    factory {
+        GetItemDescriptionUseCase(
+            itemRepository = get(),
+        )
+    }
+    factory {
+        GetItemDetailsUseCase(
+            itemRepository = get(),
+            getItemDescriptionUseCase = get(),
         )
     }
 

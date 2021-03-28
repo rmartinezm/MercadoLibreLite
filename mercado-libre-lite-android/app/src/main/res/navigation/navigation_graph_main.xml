@@ -37,6 +37,22 @@
         <argument
             android:name="query"
             app:argType="string" />
+        <action
+            android:id="@+id/action_productsFragment_to_productDetailsActivity"
+            app:destination="@id/productDetailsActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
+
+    <activity
+        android:id="@+id/productDetailsActivity"
+        android:name="cs.roberto.mercadolibrelite.presentation.product_details.ProductDetailsActivity"
+        tools:layout="@layout/activity_product_details">
+        <argument
+            android:name="itemId"
+            app:argType="string" />
+    </activity>
 
 </navigation>
