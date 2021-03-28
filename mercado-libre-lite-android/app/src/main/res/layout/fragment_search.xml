@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".presentation.search.SearchFragment">
 
@@ -31,15 +32,18 @@
             android:id="@+id/til_search_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/search_input_header_margin_top">
+            android:layout_marginTop="@dimen/search_input_header_margin_top"
+            app:startIconDrawable="@drawable/ic_search">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tiet_search_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/search_screen_search_input_hint"
-                android:text="@={ viewModel.searchInputLiveData }"
-                android:inputType="textCapSentences" />
+                android:imeOptions="actionSearch"
+                android:inputType="textCapSentences"
+                android:maxLength="@integer/search_input_max_length"
+                android:text="@={ viewModel.searchInputLiveData }" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

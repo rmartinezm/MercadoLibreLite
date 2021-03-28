@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -13,21 +14,29 @@ android {
     buildFeatures {
         dataBinding true
     }
-    
+
 }
 
 dependencies {
     /* KOTLIN */
     implementation Kotlin.standardLibrary
     /* ANDROID X */
+    implementation AndroidX.legacy
     implementation AndroidX.constraintLayout
     /* DESIGN */
     implementation Material.material
+    implementation Lottie.lottie
+    implementation Shimmer.shimmer
+    implementation Glide.glide
+    annotationProcessor Glide.compiler
     /* NAVIGATION COMPONENT */
     implementation AndroidXNavigation.fragmentKtx
+    /* PAGING */
+    implementation Paging.runtime
     /* MODULE */
     implementation project(path: Core.clean)
     implementation project(path: SharedPool.httpClient)
+    implementation project(path: Shared.item)
 }
 
 apply from: "$rootDir/base-build.gradle"

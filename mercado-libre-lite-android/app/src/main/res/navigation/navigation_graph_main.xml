@@ -13,7 +13,6 @@
             android:id="@+id/action_splashFragment_to_searchFragment"
             app:destination="@id/searchFragment"
             app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
     </fragment>
@@ -21,6 +20,23 @@
     <fragment
         android:id="@+id/searchFragment"
         android:name="cs.roberto.mercadolibrelite.presentation.search.SearchFragment"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_productsFragment"
+            app:destination="@id/productsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="cs.roberto.mercadolibrelite.presentation.products.ProductsFragment"
+        tools:layout="@layout/fragment_products">
+        <argument
+            android:name="query"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

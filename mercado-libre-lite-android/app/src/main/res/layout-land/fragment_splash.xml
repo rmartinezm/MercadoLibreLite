@@ -27,7 +27,7 @@
             android:layout_marginEnd="@dimen/lateral_margin"
             android:layout_marginBottom="@dimen/vertical_margin"
             android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/text_title_size" />
+            android:textSize="@dimen/text_view_large_title_size" />
 
     </FrameLayout>
 

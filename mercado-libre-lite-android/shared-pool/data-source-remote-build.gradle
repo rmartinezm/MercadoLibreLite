@@ -1,6 +1,9 @@
 
 dependencies {
+    /* RETROFIT */
     implementation Retrofit.retrofit
     implementation Moshi.kotlin
     kapt Moshi.codegen
+    /* MODULE */
+    implementation project(path: Core.exceptionKtx)
 }

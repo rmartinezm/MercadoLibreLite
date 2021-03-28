@@ -9,4 +9,17 @@
     <string name="search_screen_search_action">Search</string>
     <string name="search_screen_search_input_failure_query_cant_be_blank">Required search value</string>
 
+    <!-- ITEM REFERENCE: VIEW HOLDER-->
+    <string name="item_reference_price_with_currency">$%s %s</string>
+    <string name="details_failure">Vaya, ocurrió un error: %s</string>
+    <string name="network_connection_failure_title_message">Not internet connection available</string>
+    <string name="network_connection_failure_content_message">Please check your connection and try again</string>
+    <string name="empty_list_message_title_message">Oops! no results available</string>
+    <plurals name="item_reference_sold_quantity">
+        <item quantity="other">%d sold</item>
+    </plurals>
+    <plurals name="item_reference_available_quantity">
+        <item quantity="other">%d available</item>
+    </plurals>
+
 </resources>

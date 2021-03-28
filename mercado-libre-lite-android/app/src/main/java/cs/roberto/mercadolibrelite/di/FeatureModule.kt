@@ -1,5 +1,6 @@
 package cs.roberto.mercadolibrelite.di
 
+import cs.roberto.mercadolibrelite.presentation.products.productsModule
 import cs.roberto.mercadolibrelite.presentation.search.searchModule
 import org.koin.core.module.Module
 
@@ -8,4 +9,5 @@ import org.koin.core.module.Module
  */
 fun getFeatureModules(): List<Module> = listOf(
     searchModule,
+    productsModule,
 )

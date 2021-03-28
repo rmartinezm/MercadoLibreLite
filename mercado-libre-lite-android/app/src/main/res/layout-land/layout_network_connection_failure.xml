@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/ll_network_connection_failure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="@dimen/network_connection_failure_image_size"
+            android:layout_height="@dimen/network_connection_failure_image_size"
+            android:adjustViewBounds="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/no_internet_connection"
+            tools:src="@drawable/ic_launcher_foreground" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/lateral_margin"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Theme.MercadoLibreLite.TextView.Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/network_connection_failure_title_message" />
+
+            <TextView
+                style="@style/Theme.MercadoLibreLite.TextView.Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:text="@string/network_connection_failure_content_message" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

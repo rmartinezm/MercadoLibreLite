@@ -5,6 +5,7 @@
       <module name="Mercado_Libre_Lite.app" target="1.8" />
       <module name="Mercado_Libre_Lite.buildSrc" target="1.8" />
       <module name="Mercado_Libre_Lite.shared-pool.httpclient" target="1.8" />
+      <module name="Mercado_Libre_Lite.shared.item" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

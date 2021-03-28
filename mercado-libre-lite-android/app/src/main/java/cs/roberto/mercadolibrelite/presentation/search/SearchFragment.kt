@@ -1,16 +1,19 @@
 package cs.roberto.mercadolibrelite.presentation.search
 
+import android.app.Activity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import android.view.inputmethod.InputMethodManager
 import androidx.core.widget.addTextChangedListener
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import cs.roberto.mercadolibrelite.R
 import cs.roberto.mercadolibrelite.databinding.FragmentSearchBinding
+import cs.roberto.mercadolibrelite.presentation.edit_text_ktx.onImeActionSearchClickListener
 import cs.roberto.mercadolibrelite.presentation.search.validator.SearchInputFormatError
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -55,14 +58,20 @@ class SearchFragment : Fragment() {
 
     /** Manage the actions associate for views */
     private fun setupActions() {
-        binding.mbSearchAction.setOnClickListener(::onSearchActionClickListener)
+        binding.apply {
+            tietSearchInput.onImeActionSearchClickListener(::onSearchActionClickListener)
+            mbSearchAction.setOnClickListener(::onSearchActionClickListener)
+        }
     }
 
     /** Action launched at click Search button */
     private fun onSearchActionClickListener(view: View) {
         if (searchViewModel.isSearchInputValid()) {
             val searchInputValue = searchViewModel.searchInput
-            Toast.makeText(requireContext(), searchInputValue, Toast.LENGTH_SHORT).show()
+            val direction = SearchFragmentDirections
+                .actionSearchFragmentToProductsFragment(searchInputValue)
+            findNavController().navigate(direction)
+            hideKeyboard(view)
         } else manageSearchInputFormatError(searchViewModel.getSearchInputFormatError())
     }
 
@@ -81,6 +90,13 @@ class SearchFragment : Fragment() {
      */
     private fun TextInputEditText.setClearErrorListenerOnType(textInputLayout: TextInputLayout) {
         addTextChangedListener { textInputLayout.error = null }
+    }
+
+    /** */
+    private fun hideKeyboard(view: View) {
+        val inputMethodManager = requireContext()
+            .getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
 }
