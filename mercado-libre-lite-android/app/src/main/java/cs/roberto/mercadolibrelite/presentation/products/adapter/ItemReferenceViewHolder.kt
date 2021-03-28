@@ -11,9 +11,20 @@ class ItemReferenceViewHolder(
     private val binding: ViewHolderItemReferenceBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
+    /* */
+    private lateinit var itemReference: ItemReference
+
     /** */
     fun bind(itemReference: ItemReference) {
-        binding.itemReference = itemReference
+        this.itemReference = itemReference
+        binding.itemReference = this.itemReference
+    }
+
+    /** */
+    fun setOnItemReferenceActionClickListener(actionListener: (ItemReference) -> Unit) {
+        binding.root.setOnClickListener {
+            actionListener(itemReference)
+        }
     }
 
     /** */

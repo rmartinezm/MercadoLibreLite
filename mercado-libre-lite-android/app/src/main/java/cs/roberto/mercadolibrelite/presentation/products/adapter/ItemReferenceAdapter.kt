@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.DiffUtil
 import cs.roberto.mercadolibrelite.shared.item.domain.entity.ItemReference
 
 /** */
-class ItemReferenceAdapter : PagedListAdapter<ItemReference, ItemReferenceViewHolder>(ItemReferenceDiffCallback) {
+class ItemReferenceAdapter(
+    private val onItemReferenceActionClickListener: (ItemReference) -> Unit,
+) : PagedListAdapter<ItemReference, ItemReferenceViewHolder>(ItemReferenceDiffCallback) {
 
     /** */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemReferenceViewHolder =
@@ -15,7 +17,10 @@ class ItemReferenceAdapter : PagedListAdapter<ItemReference, ItemReferenceViewHo
     /** */
     override fun onBindViewHolder(holder: ItemReferenceViewHolder, position: Int) {
         val itemReference: ItemReference? = getItem(position)
-        itemReference?.let { holder.bind(it) }
+        itemReference?.let {
+            holder.bind(it)
+            holder.setOnItemReferenceActionClickListener(onItemReferenceActionClickListener)
+        }
     }
 
     /** */

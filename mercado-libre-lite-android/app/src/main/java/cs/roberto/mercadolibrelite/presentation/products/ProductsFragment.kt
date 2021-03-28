@@ -64,7 +64,7 @@ class ProductsFragment : Fragment() {
 
     /** */
     private fun setupProductsRecyclerView() {
-        itemReferenceAdapter = ItemReferenceAdapter()
+        itemReferenceAdapter = ItemReferenceAdapter(::onItemReferenceActionClickListener)
         binding.rvItems.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = itemReferenceAdapter
@@ -116,6 +116,13 @@ class ProductsFragment : Fragment() {
         itemReferenceAdapter.submitList(itemsReferences)
         goneNetworkConnectionFailureLayout()
         gonePullToRefreshLoader()
+    }
+
+    /** */
+    private fun onItemReferenceActionClickListener(itemReference: ItemReference) {
+        val direction = ProductsFragmentDirections
+            .actionProductsFragmentToProductDetailsActivity(itemReference.id)
+        findNavController().navigate(direction)
     }
 
     /** */

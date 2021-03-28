@@ -1,7 +1,7 @@
 package cs.roberto.mercadolibrelite.shared.item.domain.entity
 
 /** Represents the reference of any product */
-class ItemReference(
+open class ItemReference(
     val id: String,
     val title: String,
     val thumbnailUrl: String,
