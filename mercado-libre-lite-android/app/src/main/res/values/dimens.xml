@@ -3,15 +3,21 @@
 
     <!-- MARGIN-->
     <!-- MARGIN: HORIZONTAL -->
+    <dimen name="small_lateral_margin">4dp</dimen>
+    <dimen name="half_lateral_margin">8dp</dimen>
     <dimen name="lateral_margin">16dp</dimen>
     <dimen name="double_lateral_margin">32sp</dimen>
     <!-- MARGIN: VERTICAL -->
+    <dimen name="small_vertical_margin">6dp</dimen>
+    <dimen name="half_vertical_margin">9dp</dimen>
     <dimen name="vertical_margin">18dp</dimen>
     <dimen name="double_vertical_margin">36sp</dimen>
 
     <!-- TEXT SIZE -->
     <dimen name="caption_font_size">16sp</dimen>
-    <dimen name="text_title_size">42sp</dimen>
+    <dimen name="text_view_normal_title_size">20sp</dimen>
+    <dimen name="text_view_large_title_size">42sp</dimen>
+    <dimen name="text_view_normal_subtitle_size">16sp</dimen>
 
     <!-- WIDGETS -->
     <dimen name="material_button_width">160dp</dimen>
@@ -22,5 +28,12 @@
     <!-- SEARCH SCREEN -->
     <dimen name="search_input_header_margin_top">100sp</dimen>
     <dimen name="search_logo_width_at_landscape">260dp</dimen>
+    <dimen name="item_image_height">160dp</dimen>
+
+    <!-- NETWORK CONNECTION LAYOUT -->
+    <dimen name="network_connection_failure_image_size">220dp</dimen>
+
+    <!-- SEARCH LOADING LAYOUT -->
+    <dimen name="search_loading_image_size">160dp</dimen>
 
 </resources>

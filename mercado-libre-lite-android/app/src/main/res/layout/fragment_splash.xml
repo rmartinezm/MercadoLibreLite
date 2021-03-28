@@ -37,7 +37,7 @@
             android:fontFamily="@font/harabara_mais"
             android:text="@string/app_name_extension"
             android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/text_title_size"
+            android:textSize="@dimen/text_view_large_title_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

@@ -1,5 +1,6 @@
 package cs.roberto.mercadolibrelite.di
 
+import cs.roberto.mercadolibrelite.shared.item.itemModule
 import cs.roberto.mercadolibrelite.shared_pool.httpclient.httpClientModule
 import org.koin.core.module.Module
 
@@ -13,4 +14,6 @@ fun getSharedPoolModules(): List<Module> = listOf(
 /**
  * Obtains the Modules (in terms of Koin) that provides user-facing functionality.
  */
-fun getSharedModules(): List<Module> = listOf()
+fun getSharedModules(): List<Module> = listOf(
+    itemModule,
+)

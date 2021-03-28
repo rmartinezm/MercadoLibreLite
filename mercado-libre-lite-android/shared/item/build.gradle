@@ -1,0 +1,12 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+dependencies {
+    implementation project(path: SharedPool.httpClient)
+}
+
+apply from: "$rootDir/shared-pool/base-shared-build.gradle"
+apply from: "$rootDir/shared-pool/data-source-remote-build.gradle"

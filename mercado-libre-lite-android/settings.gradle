@@ -4,7 +4,11 @@ include ':app'
 
 /* CORE */
 include ':core:stringktx'
+include ':core:exceptionktx'
 include ':core:clean'
 
 /* SHARED POOL */
 include ':shared-pool:httpclient'
+
+/* SHARED */
+include ':shared:item'

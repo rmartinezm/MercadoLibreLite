@@ -32,8 +32,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:gravity="center"
+            android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,13 +42,15 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_search_input"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/ic_search">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tiet_search_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/search_screen_search_input_hint"
+                    android:imeOptions="actionSearch"
                     android:inputType="textCapSentences"
                     android:text="@={ viewModel.searchInputLiveData }" />
 
@@ -58,8 +60,8 @@
                 android:id="@+id/mb_search_action"
                 android:layout_width="@dimen/material_button_width"
                 android:layout_height="wrap_content"
-                android:text="@string/search_screen_search_action"
                 android:layout_marginTop="@dimen/vertical_margin"
+                android:text="@string/search_screen_search_action"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
