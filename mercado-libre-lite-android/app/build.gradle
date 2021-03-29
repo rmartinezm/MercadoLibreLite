@@ -8,7 +8,7 @@ plugins {
 android {
 
     defaultConfig {
-        applicationId "cs.roberto.mercadolibrelite"
+        applicationId "cs.roberto.mercadolibrelite.app"
     }
 
     buildFeatures {
@@ -40,6 +40,8 @@ dependencies {
     implementation project(path: Core.clean)
     implementation project(path: SharedPool.httpClient)
     implementation project(path: Shared.item)
+    implementation project(path: FeaturePool.widgetKtx)
+    implementation project(path: FeaturePool.bindingKtx)
 }
 
 apply from: "$rootDir/base-build.gradle"

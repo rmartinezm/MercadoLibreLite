@@ -12,3 +12,7 @@ include ':shared-pool:httpclient'
 
 /* SHARED */
 include ':shared:item'
+
+/* FEATURE POOL */
+include ':feature-pool:bindingktx'
+include ':feature-pool:widgetktx'
