@@ -17,6 +17,9 @@
             <option value="$PROJECT_DIR$/core/clean" />
             <option value="$PROJECT_DIR$/core/exceptionktx" />
             <option value="$PROJECT_DIR$/core/stringktx" />
+            <option value="$PROJECT_DIR$/feature-pool" />
+            <option value="$PROJECT_DIR$/feature-pool/bindingktx" />
+            <option value="$PROJECT_DIR$/feature-pool/widgetktx" />
             <option value="$PROJECT_DIR$/shared" />
             <option value="$PROJECT_DIR$/shared-pool" />
             <option value="$PROJECT_DIR$/shared-pool/httpclient" />

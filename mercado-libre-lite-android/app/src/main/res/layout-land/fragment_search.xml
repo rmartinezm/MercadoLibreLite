@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".presentation.search.SearchFragment">
+    tools:context=".app.feature.search.SearchFragment">
 
     <data>
 
         <variable
             name="viewModel"
-            type="cs.roberto.mercadolibrelite.presentation.search.SearchViewModel" />
+            type="cs.roberto.mercadolibrelite.app.feature.search.SearchViewModel" />
 
     </data>
 
