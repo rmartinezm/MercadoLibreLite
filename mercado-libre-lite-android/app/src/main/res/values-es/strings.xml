@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- APPLICATION -->
+    <string name="app_name">Mercado Libre Lite</string>
+    <string name="app_name_extension">lite</string>
+
+    <!-- SEARCH SCREEN -->
+    <string name="search_screen_search_input_hint">Busca por productos, marcas y más…</string>
+    <string name="search_screen_search_action">Buscar</string>
+    <string name="search_screen_search_input_failure_query_cant_be_blank">Se requiere un valor de búsqueda</string>
+
+    <!-- ITEMS LIST -->
+    <string name="empty_list_message_title_message">¡Vaya! parece que no hay resultados</string>
+
+    <!-- ITEM REFERENCE: VIEW HOLDER-->
+    <string name="item_reference_price_with_currency">$%s %s</string>
+    <string name="details_failure">Vaya, ocurrió un error: %s</string>
+    <plurals name="item_reference_sold_quantity">
+        <item quantity="one">%d vendido</item>
+        <item quantity="other">%d vendidos</item>
+    </plurals>
+    <plurals name="item_reference_available_quantity">
+        <item quantity="one">%d disponible</item>
+        <item quantity="other">%d disponibles</item>
+    </plurals>
+
+    <!-- PRODUCT DETAILS -->
+    <string name="product_details_accepts_mercadopago_label">Acepta</string>
+    <string name="product_details_description_label">Descripción</string>
+    <string name="product_details_see_in_mercadolibre_label">Ver en Mercado Libre</string>
+
+    <!-- NETWORK CONNECTION -->
+    <string name="network_connection_failure_title_message">Sin conexión a internet</string>
+    <string name="network_connection_failure_content_message">Por favor revisa tu conexión e inténtalo nuevamente</string>
+
+</resources>
