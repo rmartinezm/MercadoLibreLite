@@ -16,7 +16,7 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 import retrofit2.Retrofit
 
-/* */
+/* Module in terms or [Koin] that contains the Item data flow classes creation methods */
 val itemModule: Module = module {
 
     /** PRESENTATION **/

@@ -2,7 +2,7 @@ package cs.roberto.mercadolibrelite.shared.item.domain.use_case.get_item_descrip
 
 import cs.roberto.mercadolibrelite.core.clean.domain.Failure
 
-/** Represents all the possibles failures associated to GetItems use case */
+/** Represents all the possibles failures associated to GetItemDescription */
 sealed class GetItemDescriptionFailure : Failure() {
 
     /** Emitted when Internet Connection isn't available. */

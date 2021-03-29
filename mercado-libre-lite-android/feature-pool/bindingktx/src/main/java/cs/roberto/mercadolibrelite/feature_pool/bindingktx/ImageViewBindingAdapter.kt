@@ -4,6 +4,7 @@ import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 
+/** Load the [imageUrl] received as parameter into [imageView] powered by [Glide] */
 @BindingAdapter("bindImageUrl")
 fun bindImageUrl(imageView: ImageView, imageUrl: String?) {
     imageUrl?.let {
