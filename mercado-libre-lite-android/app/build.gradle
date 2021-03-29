@@ -23,10 +23,13 @@ dependencies {
     /* ANDROID X */
     implementation AndroidX.legacy
     implementation AndroidX.constraintLayout
-    /* DESIGN */
+    /* DESIGN: Material Design */
     implementation Material.material
+    /* DESIGN: Lottie files */
     implementation Lottie.lottie
-    implementation Shimmer.shimmer
+    /* DESIGN: Image slider */
+    implementation ImageSlider.autoImageSlider
+    /* DESIGN: Glide */
     implementation Glide.glide
     annotationProcessor Glide.compiler
     /* NAVIGATION COMPONENT */

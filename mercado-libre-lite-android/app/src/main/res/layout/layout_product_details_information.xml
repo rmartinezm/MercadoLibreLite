@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="itemDetails"
+            type="cs.roberto.mercadolibrelite.shared.item.domain.entity.ItemDetails" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Theme.MercadoLibreLite.TextView.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{ itemDetails.title }"
+            android:textSize="@dimen/text_view_medium_title_size"
+            tools:text="@tools:sample/lorem" />
+
+        <TextView
+            style="@style/Theme.MercadoLibreLite.TextView.Title"
+            setCurrency="@{ itemDetails.currency }"
+            setPrice="@{ itemDetails.price }"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin"
+            tools:text="$10,000 MXN" />
+
+        <TextView
+            style="@style/Theme.MercadoLibreLite.TextView.Content"
+            setSoldQuantity="@{ itemDetails.soldQuantity }"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/half_vertical_margin"
+            tools:text="10 sold" />
+
+        <TextView
+            style="@style/Theme.MercadoLibreLite.TextView.Content"
+            setAvailableQuantity="@{ itemDetails.availableQuantity }"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            tools:text="21 available" />
+
+        <TextView
+            style="@style/Theme.MercadoLibreLite.TextView.Content"
+            visibilityByBoolean="@{ itemDetails.acceptsMercadoPago }"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:drawablePadding="@dimen/half_lateral_margin"
+            android:text="@string/product_details_accepts_mercadopago_label"
+            app:drawableEndCompat="@drawable/ic_mercado_pago_logo" />
+
+        <TextView
+            style="@style/Theme.MercadoLibreLite.TextView.Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:text="@string/product_details_description_label" />
+
+        <TextView
+            style="@style/Theme.MercadoLibreLite.TextView.Content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:text="@{ itemDetails.description }"
+            tools:text="@tools:sample/lorem" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mb_see_in_mercadolibre_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:text="@string/product_details_see_in_mercadolibre_label" />
+
+    </LinearLayout>
+
+</layout>

@@ -22,4 +22,9 @@
         <item quantity="other">%d available</item>
     </plurals>
 
+    <!-- PRODUCT DETAILS -->
+    <string name="product_details_accepts_mercadopago_label">Accepts</string>
+    <string name="product_details_description_label">Description</string>
+    <string name="product_details_see_in_mercadolibre_label">See in Mercado Libre</string>
+
 </resources>

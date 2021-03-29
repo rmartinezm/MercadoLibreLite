@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MercadoLibreLite.SliderView">
+        <item name="sliderIndicatorGravity">center_horizontal|bottom</item>
+        <item name="sliderIndicatorMargin">15dp</item>
+        <item name="sliderIndicatorOrientation">horizontal</item>
+        <item name="sliderIndicatorPadding">3dp</item>
+        <item name="sliderIndicatorRadius">2dp</item>
+        <item name="sliderIndicatorSelectedColor">@color/colorAccent</item>
+        <item name="sliderIndicatorUnselectedColor">@color/colorPrimary</item>
+    </style>
+
+</resources>

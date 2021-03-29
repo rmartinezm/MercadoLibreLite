@@ -16,6 +16,7 @@
     <!-- TEXT SIZE -->
     <dimen name="caption_font_size">16sp</dimen>
     <dimen name="text_view_normal_title_size">20sp</dimen>
+    <dimen name="text_view_medium_title_size">26sp</dimen>
     <dimen name="text_view_large_title_size">42sp</dimen>
     <dimen name="text_view_normal_subtitle_size">16sp</dimen>
 
@@ -35,5 +36,9 @@
 
     <!-- SEARCH LOADING LAYOUT -->
     <dimen name="search_loading_image_size">160dp</dimen>
+
+    <!-- PRODUCT DETAILS -->
+    <dimen name="product_details_loader_width">220dp</dimen>
+    <dimen name="product_details_image_height">220dp</dimen>
 
 </resources>
