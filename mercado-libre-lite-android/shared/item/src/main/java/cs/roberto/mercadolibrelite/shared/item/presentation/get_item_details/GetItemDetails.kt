@@ -3,6 +3,7 @@ package cs.roberto.mercadolibrelite.shared.item.presentation.get_item_details
 import androidx.lifecycle.LiveData
 import cs.roberto.mercadolibrelite.core.clean.domain.Either
 import cs.roberto.mercadolibrelite.core.clean.presentation.Status
+import cs.roberto.mercadolibrelite.shared.item.domain.entity.ItemDetails
 import cs.roberto.mercadolibrelite.shared.item.domain.use_case.get_items_details.GetItemDetailsFailure
 import cs.roberto.mercadolibrelite.shared.item.domain.use_case.get_items_details.GetItemDetailsResponse
 import cs.roberto.mercadolibrelite.shared.item.domain.use_case.get_items_references.GetItemsReferencesFailure
@@ -13,6 +14,9 @@ typealias GetItemDetailsStatus = Status<GetItemDetailsFailure, GetItemDetailsRes
 
 /** */
 interface GetItemDetails {
+
+    /* */
+    val itemDetails: ItemDetails?
 
     /** */
     fun getItemDetailsAsLiveData(itemId: String): LiveData<GetItemDetailsStatus>

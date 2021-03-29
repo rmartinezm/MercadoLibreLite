@@ -25,7 +25,7 @@ val itemModule: Module = module {
             getItemsReferencesUseCase = get(),
         )
     }
-    single<GetItemDetails> {
+    factory<GetItemDetails> {
         GetItemDetailsImpl(
             getItemDetailsUseCase = get(),
         )

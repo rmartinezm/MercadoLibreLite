@@ -73,9 +73,8 @@ class ProductsFragment : Fragment() {
 
     /** */
     private fun setupPullToRefresh() {
-        binding.srlRefresh.setOnRefreshListener {
-            productsViewModel.invalidateDataSource()
-        }
+        binding.srlRefresh
+            .setOnRefreshListener(productsViewModel::invalidateDataSource)
     }
 
     /** */
@@ -138,11 +137,6 @@ class ProductsFragment : Fragment() {
     /** */
     private fun showEmptyListMessageLayout() {
         binding.layoutEmptyListMessage.root.visibility = View.VISIBLE
-    }
-
-    /** */
-    private fun goneEmptyListMessageLayout() {
-        binding.layoutEmptyListMessage.root.visibility = View.GONE
     }
 
     /** */

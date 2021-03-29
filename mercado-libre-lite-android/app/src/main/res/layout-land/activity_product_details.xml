@@ -35,7 +35,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:paddingHorizontal="@dimen/lateral_margin"
                     android:paddingVertical="@dimen/vertical_margin">
 
@@ -59,21 +59,30 @@
                     <LinearLayout
                         android:id="@+id/ll_product_details_container"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
 
                         <com.smarteist.autoimageslider.SliderView
-                            style="@style/Theme.MercadoLibreLite.SliderView"
                             android:id="@+id/sv_images"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="@dimen/product_details_image_height"
                             android:layout_marginTop="@dimen/half_vertical_margin"
-                            android:layout_marginBottom="@dimen/vertical_margin" />
+                            android:layout_weight="0.333"
+                            android:theme="@style/Theme.MercadoLibreLite.SliderView" />
 
-                        <include
-                            android:id="@+id/layout_product_details_information"
-                            layout="@layout/layout_product_details_information"
-                            app:itemDetails="@{ itemDetails }"/>
+                        <androidx.core.widget.NestedScrollView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/lateral_margin"
+                            android:layout_weight="1">
+
+                            <include
+                                android:id="@+id/layout_product_details_information"
+                                layout="@layout/layout_product_details_information"
+                                app:itemDetails="@{ itemDetails }" />
+
+                        </androidx.core.widget.NestedScrollView>
 
                     </LinearLayout>
 
