@@ -6,12 +6,12 @@ import cs.roberto.mercadolibrelite.shared.item.domain.use_case.get_items_referen
 import cs.roberto.mercadolibrelite.shared.item.domain.use_case.get_items_references.GetItemsReferencesResponse
 import cs.roberto.mercadolibrelite.shared.item.domain.use_case.get_items_references.GetItemsReferencesUseCase
 
-/** */
+/** Defines the GetItemsReferences interaction */
 internal class GetItemsReferencesImpl(
     private val getItemsReferencesUseCase: GetItemsReferencesUseCase
 ) : GetItemsReferences {
 
-    /** */
+    /** Obtains the [Either] response collected related to [GetItemsReferencesUseCase] */
     override suspend fun getItemsReferencesAsEither(
         query: String,
         page: Int,

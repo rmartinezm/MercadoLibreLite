@@ -4,7 +4,7 @@ import cs.roberto.mercadolibrelite.shared_pool.httpclient.retrofit.RetrofitBuild
 import org.koin.dsl.module
 import retrofit2.Retrofit
 
-/* */
+/* Module in terms or [Koin] that contains the HttpClient creation methods */
 val httpClientModule = module {
 
     /** RETROFIT **/

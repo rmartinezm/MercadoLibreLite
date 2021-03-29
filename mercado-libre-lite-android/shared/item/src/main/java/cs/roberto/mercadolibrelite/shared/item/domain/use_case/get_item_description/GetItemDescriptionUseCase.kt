@@ -9,7 +9,7 @@ class GetItemDescriptionUseCase(
     private val itemRepository: ItemRepository
 ) : UseCase<GetItemDescriptionResponse, GetItemDescriptionParams, GetItemDescriptionFailure>() {
 
-    /** */
+    /** Execute the GetItemDescription data flow. */
     override suspend fun run(
         params: GetItemDescriptionParams
     ): Either<GetItemDescriptionFailure, GetItemDescriptionResponse> =
